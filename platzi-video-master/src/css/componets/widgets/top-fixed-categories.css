@@ -1,0 +1,12 @@
+.top-fixed-categories{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  @media ( --tablet ) {
+    margin-top: 0;
+  }
+}

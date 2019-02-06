@@ -1,0 +1,44 @@
+.Home-layout{
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 320px 1fr;
+  grid-template-areas: "related categories";
+
+  @media ( --desktop ) {
+    grid-template: 1fr / 280px 1fr;
+  }
+
+  & .Related{
+    grid-area: related;
+    background: var( --colorBlack );
+  }
+
+  & .Categories{
+    grid-area: categories;
+    background: var( --colorWhite );
+    box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    @media ( --tablet ) {
+      overflow-y: auto;
+      overflow-x: auto;
+    }
+  }
+
+  & .Related, & .Categories{
+    height: 100vh;
+
+    @media ( --tablet ) {
+      height: auto;
+    }
+  }
+}
+
+#home-container .Home-layout {
+
+  @media ( --tablet ) {
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "related" "categories";
+  }
+}
